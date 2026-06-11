@@ -1,0 +1,15 @@
+# Build Artifacts (Compiled object files and executables)
+*.o
+*.elf
+*.hex
+
+# AVR-GCC Additional Outputs (Optional map and listing files)
+*.map
+*.lss
+*.eep
+*.sym
+
+# Editor Temporary and Swap Files (Vim, Nano, etc.)
+*.swp
+*.swo
+*~
