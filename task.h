@@ -18,10 +18,10 @@ typedef enum {
  * Holds the execution context, state, and scheduling parameters of a task.
  */
 typedef struct {
-    volatile uint8_t* stack_pointer; /* Points to the top of the task's private stack */
-    TaskState_t task_state;          /* Current lifecycle state of the task */
-    uint8_t priority;                /* Scheduler priority (higher value = higher priority) */
-    volatile uint16_t sleep_ticks;   /* Number of ticks remaining while in BLOCKED state */
+    volatile uint8_t* stack_pointer; 
+    volatile TaskState_t task_state; /* DÜZELTİLDİ: volatile eklendi */
+    uint8_t priority;                
+    volatile uint16_t sleep_ticks;   
 } TCB_t;
 
 /* Global RTOS variables exposed for the Context Switcher */
