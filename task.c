@@ -17,9 +17,9 @@ void task_create(uint8_t task_id, void (*task_code)(void), TaskState_t initial_s
 
     /* 1. Push the entry point address (Program Counter) */
     uint16_t address = (uint16_t)task_code;
-    *sp = (uint8_t)(address & 0xFF);        
+    *sp = (uint8_t)((address >> 8) & 0xFF); /* DÜZELTİLDİ: Önce High Byte */
     sp--;
-    *sp = (uint8_t)((address >> 8) & 0xFF); 
+    *sp = (uint8_t)(address & 0xFF);        /* DÜZELTİLDİ: Sonra Low Byte */
     sp--;
 
     /* 2. Push initial Register 0 (R0) */
