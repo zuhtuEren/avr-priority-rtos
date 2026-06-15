@@ -22,8 +22,8 @@ void timer0_init(void) {
         "push r0 \n\t" \
         "in r0, %0 \n\t" \
         "push r0 \n\t" \
-        "clr r1 \n\t" \
-        "push r1 \n\t" \
+        "push r1 \n\t" /* DÜZELTİLDİ: Önce r1'in değerini yedekle */ \
+        "clr r1 \n\t"  /* DÜZELTİLDİ: Sonra r1'i derleyici için sıfırla */ \
         "push r2 \n\t" "push r3 \n\t" "push r4 \n\t" "push r5 \n\t" \
         "push r6 \n\t" "push r7 \n\t" "push r8 \n\t" "push r9 \n\t" \
         "push r10 \n\t" "push r11 \n\t" "push r12 \n\t" "push r13 \n\t" \
