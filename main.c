@@ -9,7 +9,6 @@ void task_green(void) {
             os_delay(3000); 
             led_off(LED_GREEN);
         }
-        // Eğer butona basılmadıysa 10 ms uyu.
         os_delay(10); 
     }
 }
@@ -21,7 +20,6 @@ void task_yellow(void) {
             os_delay(3000);     
             led_off(LED_YELLOW);
         }
-        // Subay, Er'in nefes alması için işlemciyi devrediyor.
         os_delay(10); 
     }
 }
@@ -33,7 +31,6 @@ void task_red(void) {
             os_delay(3000);     
             led_off(LED_RED);
         }
-        // General, alt rütbelilerin butonlarını okuması için 10ms uyuyor.
         os_delay(10); 
     }
 }
